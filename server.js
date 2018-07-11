@@ -3,6 +3,9 @@ const path = require('path');
 
 const users = require('./routes/api/users');
 const routes = require('./routes');
+const items = require('./routes/api/items');
+const lists = require('./routes/api/lists');
+const getUserInfo = require('./routes/api/getUserInfo');
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -26,15 +29,18 @@ require('./config/passport')(passport);
 
 // Use Routes
 app.use('/api/users', users);
-app.use(routes);
+app.use('/api/items', items);
+app.use('/api/lists', lists);
+app.use('/api/getUserInfo', getUserInfo);
 
 // Server static assets if in production
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('../app/dist/')); // serve the static react app
-  app.get(/^\/(?!api).*/, (req, res) => { // don't serve api routes to react app
-    res.sendFile('index.html', { root: '../app/dist/' });
+  // Set static folder
+  app.use(express.static('client/build'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
-  console.log('Serving React App...');
 }
 
 
