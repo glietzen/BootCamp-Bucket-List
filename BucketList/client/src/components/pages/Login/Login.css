@@ -1,0 +1,31 @@
+h2{
+    margin-top: 150px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.loginContainer {
+    width: 25%;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+body {
+    background-color: #b2bec3;
+}
+
+.text-style {
+    font-family: 'Bree Serif', serif;
+}
+
+@media only screen and (max-width: 800px) {
+    .loginContainer {
+        width: 75%;
+        background-color: white;
+        padding: 50px;
+        border-radius: 10px;
+        margin: auto;
+    }
+}

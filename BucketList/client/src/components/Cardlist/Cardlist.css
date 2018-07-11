@@ -1,0 +1,16 @@
+.places {
+    font-family: 'Lato', sans-serif;
+ }
+ 
+ .card {
+     font-family: 'Lato', sans-serif;
+     box-shadow: 1px 1px 5px black,
+                -1px -1px 5px grey;
+     margin-top: 50px;
+     overflow: hidden;
+     width: 100%;
+ }
+ 
+ .card > .places > img {
+     width: 100%;
+ }

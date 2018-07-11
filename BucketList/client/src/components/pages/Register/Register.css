@@ -1,0 +1,35 @@
+h2{
+    margin-top: 150px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+.registerContainer {
+    width: 25%;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 1px 1px 5px grey,
+                -1px -1px 5px grey;
+}
+
+body {
+    background-color: #b2bec3;
+}
+
+.text-style {
+    font-family: 'Bree Serif', serif;
+    
+}
+
+@media only screen and (max-width: 800px) {
+    .registerContainer {
+        width: 75%;
+        background-color: white;
+        padding: 50px;
+        border-radius: 10px;
+        margin: auto;
+    }
+}

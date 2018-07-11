@@ -1,0 +1,48 @@
+
+.nav-bar {
+    border-bottom: 1px solid gray;
+    height: 75px;
+}
+
+.nav-item {
+    font-family: 'Lato', sans-serif;
+    float: right;
+    line-height: 75px;
+}
+
+.nav-item a:hover {
+    font-size: 20px;
+}
+
+.title {
+    margin-left: 50px;
+    text-shadow: 2px 2px black;
+    font-family: 'Galada', cursive;
+    font-size: 50px;
+    line-height: 75px;
+}
+
+.side-nav {
+    background-color: #4db6ac;
+}
+
+.side-nav a {
+    font-size: 25px;
+    margin-right: 150px;
+    color: white;
+}
+
+.side-nav a:hover {
+    color: grey;
+}
+
+
+
+@media only screen and (min-width: 744px) {
+    .title {
+        text-shadow: 2px 2px black,
+                    -1px -1px black;
+        margin-left: 25px;
+    }
+
+}
