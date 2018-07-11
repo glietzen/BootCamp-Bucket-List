@@ -35,10 +35,10 @@ app.use('/api/getUserInfo', getUserInfo);
 
 // Server static assets if in production
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('../app/dist/')); // serve the static react app
+  app.use(express.static('client/build')); // serve the static react app
   app.get(/^\/(?!api).*/, (req, res) => { // don't serve api routes to react app
-    res.sendFile('index.html', { root: '../app/dist/' });
-  });
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+});
   console.log('Serving React App...');
 }
 
